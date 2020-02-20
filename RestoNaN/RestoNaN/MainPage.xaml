@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" mc:Ignorable="d" x:Class="RestoNaN.MainPage" NavigationPage.HasNavigationBar="False" Title="HOME">
+
+    <StackLayout>
+
+
+        <ScrollView VerticalOptions="Center">
+
+
+            <StackLayout>
+
+                <StackLayout Margin="0,10,0,0">
+                    <Frame CornerRadius="10" BorderColor="Gray" Margin="7" HeightRequest="15" HasShadow="True" Padding="20">
+                        <SearchBar HorizontalTextAlignment="Center" Placeholder="Search" Margin="0,0,0,-16.9" VerticalOptions="Center" />
+                    </Frame>
+
+                </StackLayout>
+                <StackLayout  HorizontalOptions="Center" Padding="35" Orientation="Horizontal">
+                    <Label Text="Warsaw, Poland" TextColor="Black" />
+                    <Image Source="coll.png" TranslationY="-8" HeightRequest="35" />
+                    <Label Text="Recommended" TextColor="Black" />
+                    <Image Source="coll.png" TranslationY="-8" HeightRequest="35" />
+                </StackLayout>
+
+
+
+
+                <StackLayout Margin="25,0,0,0">
+                    <Label Text="Explore restaurants" FontSize="20" FontAttributes="Bold" TextColor="Black" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="FillAndExpand">
+                    <RelativeLayout HeightRequest="90" Margin="20,5">
+
+                        <ListView x:Name="ListeCategorieResto" SeparatorVisibility="None" HasUnevenRows="False" CachingStrategy="RecycleElement" RowHeight="100" Rotation="270" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5,Constant=-45}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=-0.5,Constant=45}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant,Constant=90}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <ContentView Rotation="90">
+
+
+                                            <Label Text="{Binding name}" TextColor="Black" VerticalOptions="Center" FontAttributes="Bold" Margin="6,0" />
+
+
+
+
+
+
+
+
+
+                                        </ContentView>
+
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                    </RelativeLayout>
+
+                </StackLayout>
+
+                <StackLayout Margin="20,5">
+
+                    <ListView x:Name="ListeResto" RowHeight="150">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Margin="0,20">
+                                        <yummy:PancakeView CornerRadius="10">
+                                            <Image Source="{Binding image}" HeightRequest="150" WidthRequest="200" Aspect="AspectFill" />
+                                        </yummy:PancakeView>
+
+
+
+                                        <StackLayout Orientation="Vertical" Margin="30,0,0,0">
+                                            <Label Text="{Binding name}" FontAttributes="Bold" TextColor="#6cad87" FontSize="Title" HorizontalOptions="Start" x:Name="nomResto" />
+
+
+                                            <Label Text="{Binding city}" x:Name="ville" TextColor="Black" FontSize="Subtitle" />
+                                            <Label Text="{Binding street}" x:Name="rue" TextColor="Black" FontSize="Subtitle" />
+
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="etoil" HeightRequest="20" />
+                                                <Image Source="etoil" HeightRequest="20" />
+                                                <Image Source="etoil" HeightRequest="20" />
+                                            </StackLayout>
+
+                                        </StackLayout>
+
+
+
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+
+                </StackLayout>
+
+
+            </StackLayout>
+
+        </ScrollView>
+
+
+        <AbsoluteLayout Padding="10" BackgroundColor="Transparent">
+            <ImageButton Source="icmaps.png" BackgroundColor="#6cad87" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds=".95,.95,80,80" CornerRadius="50" />
+        </AbsoluteLayout>
+
+
+    </StackLayout>
+</ContentPage>

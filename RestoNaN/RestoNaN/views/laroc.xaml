@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage BackgroundImageSource="girlBlack.jpeg" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:ie="clr-namespace:IconEntry.FormsPlugin.Abstractions;assembly=IconEntry.FormsPlugin.Abstractions" Title="SIGN IN" x:Class="RestoNaN.views.laroc" NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False">
+    <StackLayout VerticalOptions="Center" Padding="10">
+        <ScrollView VerticalOptions="CenterAndExpand">
+            <StackLayout>
+
+                <Label Text="RestoNaN" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" FontSize="30" />
+
+                <StackLayout Margin="20">
+
+
+                    <yummy:PancakeView CornerRadius="5" BorderThickness="2" Margin="0,0,0,15" BorderColor="#6cad87" IsClippedToBounds="true">
+                        <ie:IconEntry HorizontalTextAlignment="Center" Opacity="0.7" BackgroundColor="#dadae0" Placeholder="enter your email" Icon="email.png" x:Name="email" />
+                    </yummy:PancakeView>
+
+
+
+                    <yummy:PancakeView CornerRadius="5" BorderThickness="2" BorderColor="#6cad87" IsClippedToBounds="true">
+                        <ie:IconEntry Opacity="0.7" BackgroundColor="#dadae0" HorizontalTextAlignment="Center" IsPassword="True" Placeholder="password" Icon="pass.png" x:Name="password" />
+                    </yummy:PancakeView>
+
+                    <Label Text="Forgot Password " TextColor="LightBlue" TextDecorations="Underline" Margin="5" />
+                </StackLayout>
+
+                <StackLayout Margin="20">
+                    <Button Text="Sign In" TextColor="White" CornerRadius="5" x:Name="signup" BackgroundColor="#6cad87" FontAttributes="Bold" />
+
+                    <Label Text="Or" TextColor="White" FontSize="20" HorizontalOptions="Center" />
+
+                </StackLayout>
+
+                <StackLayout Margin="20">
+                    <Button  ImageSource="facebookIcon.png" CornerRadius="5" BackgroundColor="#0c4196" TextColor="White" Text="Sign in With Facebook" BorderColor="White" />
+                    <Button  ImageSource="Google.png" CornerRadius="10" Text="Sign in With Google" TextColor="White" FontAttributes="Bold" BackgroundColor="Transparent" BorderWidth="1" BorderColor="White" />
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </StackLayout>
+</ContentPage>

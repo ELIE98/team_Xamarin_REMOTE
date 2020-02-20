@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991537" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="CarouselView" Version="7.0.3.1" />
+    <PackageReference Include="CarouselView.FormsPlugin" Version="5.2.0" />
+    <PackageReference Include="Xam.FormsPlugin.IconEntry" Version="1.1.1" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.3.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="DLToolkit.Forms.Controls.FlowListView" Version="2.0.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="views\" />
+    <Folder Include="models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="views\Cart.xaml.cs">
+      <DependentUpon>Cart.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="views\Details.xaml.cs">
+      <DependentUpon>Details.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="views\Explore.xaml.cs">
+      <DependentUpon>Explore.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="views\favorite.xaml.cs">
+      <DependentUpon>favorite.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="views\floating.xaml.cs">
+      <DependentUpon>floating.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="views\laroc.xaml.cs">
+      <DependentUpon>laroc.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="views\profile.xaml.cs">
+      <DependentUpon>profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="views\signUp.xaml.cs">
+      <DependentUpon>signUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="views\Tabs.xaml.cs">
+      <DependentUpon>Tabs.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="views\Visited.xaml.cs">
+      <DependentUpon>Visited.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="views\Started.xaml.cs">
+      <DependentUpon>Started.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

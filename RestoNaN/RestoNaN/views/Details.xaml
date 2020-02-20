@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" x:Class="RestoNaN.views.Details" NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False">
+    <ScrollView>
+        <StackLayout>
+            <Frame  HasShadow="True" CornerRadius="20" Padding="25">
+                <StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Frame CornerRadius="10" Padding="10" HasShadow="True" HorizontalOptions="StartAndExpand">
+                            <ImageButton Source="BackSimple" BackgroundColor="Transparent" x:Name="GoBack" HeightRequest="15" WidthRequest="20"></ImageButton>
+                        </Frame>
+
+                        <Label Text="Add to cart" TextColor="Black" FontAttributes="Bold" FontSize="Title" Margin="0,10,100,0"></Label>
+                    </StackLayout>
+
+                    <Image Source="saumon.jpeg" />
+
+
+
+                    <StackLayout Orientation="Horizontal">
+
+                        <StackLayout Orientation="Vertical">
+                            <Label TextColor="Black" FontSize="20" FontAttributes="Bold">4.8</Label>
+                            <Label FontAttributes="Bold" FontSize="15">2231 reviews</Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="grennStar.png" HeightRequest="15" />
+                                <Image Source="grennStar.png" HeightRequest="15" />
+                                <Image Source="grennStar.png" HeightRequest="15" />
+                                <Image Source="grennStar.png" HeightRequest="15" />
+                                <Image Source="grennStar.png" HeightRequest="15" />
+                            </StackLayout>
+                        </StackLayout>
+
+                        <ImageButton Source="GrayH.png" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" HeightRequest="30"></ImageButton>
+
+                    </StackLayout>
+
+
+                </StackLayout>
+
+            </Frame>
+            <StackLayout Padding="20" VerticalOptions="Center">
+                <Label TextColor="Black" FontAttributes="Bold" FontSize="35">Salmon filet with salad</Label>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
+                       dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
+                       Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie
+                       , enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, "></Label>
+
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+
+                        <yummy:PancakeView Margin="8,0" CornerRadius="10" HasShadow="True" BorderColor="Gray">
+                            <Image Source="boeuf.jpeg" Aspect="AspectFill" HeightRequest="80" WidthRequest="90"></Image>
+                        </yummy:PancakeView>
+
+                        <yummy:PancakeView Margin="8,0" CornerRadius="10" HasShadow="True" BorderColor="Gray">
+                            <Image Source="viande.jpeg" Aspect="AspectFill" HeightRequest="80" WidthRequest="90"></Image>
+                        </yummy:PancakeView>
+
+
+                        <Frame Margin="8,0" HeightRequest="40" WidthRequest="30" CornerRadius="10" HasShadow="True" BorderColor="Gray">
+                            <ImageButton Source="plus.png" BackgroundColor="Transparent"></ImageButton>
+                        </Frame>
+                        <Frame Margin="8,0" HeightRequest="40" WidthRequest="30" CornerRadius="10" HasShadow="True" BorderColor="Gray">
+                            <ImageButton Source="plus.png" BackgroundColor="Transparent"></ImageButton>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout  Orientation="Horizontal" HorizontalOptions="Center">
+
+                    <Stepper x:Name="stepper" Increment="1" Minimum="1" Maximum="5" />
+                    <Label Text="{Binding Source={x:Reference stepper}, Path=Value}" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"></Label>
+                </StackLayout>
+
+                <StackLayout>
+
+                    <yummy:PancakeView CornerRadius="50,0,0,50" HorizontalOptions="Center" Margin="0,10">
+                        <Button Text="Add to cart" TextColor="White" x:Name="CartButton" Padding="50,30" BackgroundColor="#6cad87" HorizontalOptions="EndAndExpand" />
+                    </yummy:PancakeView>
+
+                </StackLayout>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

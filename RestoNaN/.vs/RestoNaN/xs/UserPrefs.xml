@@ -1,0 +1,59 @@
+﻿<Properties StartupConfiguration="{097041B1-0331-4554-A75B-137646658BA6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RestoNaN/views/Details.xaml.cs">
+    <Files>
+      <File FileName="RestoNaN/MainPage.xaml" Line="70" Column="136" />
+      <File FileName="RestoNaN/MainPage.xaml.cs" Line="52" Column="32" />
+      <File FileName="RestoNaN/App.xaml.cs" />
+      <File FileName="RestoNaN/App.xaml" />
+      <File FileName="RestoNaN/views/Started.xaml.cs" Line="28" Column="1" />
+      <File FileName="RestoNaN/views/Started.xaml" Line="17" Column="25" />
+      <File FileName="RestoNaN/views/laroc.xaml.cs" />
+      <File FileName="RestoNaN/views/laroc.xaml" />
+      <File FileName="RestoNaN/views/signUp.xaml" />
+      <File FileName="RestoNaN/models/Restaurant.cs" />
+      <File FileName="RestoNaN/models/CategorieRepas.cs" />
+      <File FileName="RestoNaN/models/CategorieRestaurant.cs" />
+      <File FileName="RestoNaN/views/Tabs.xaml" />
+      <File FileName="RestoNaN/views/Article.xaml.cs" Line="1" Column="1" />
+      <File FileName="RestoNaN/views/Cart.xaml.cs" Line="7" Column="2" />
+      <File FileName="RestoNaN/views/favorite.xaml" Line="1" Column="1" />
+      <File FileName="RestoNaN/models/Food.xaml" Line="1" Column="1" />
+      <File FileName="RestoNaN/models/Food.xaml.cs" Line="1" Column="1" />
+      <File FileName="RestoNaN/views/Cart.xaml" Line="1" Column="1" />
+      <File FileName="RestoNaN/views/Details.xaml.cs" Line="1" Column="1" />
+      <File FileName="RestoNaN/views/Details.xaml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RestoNaN" expanded="True">
+            <Node name="RestoNaN" expanded="True">
+              <Node name="models" expanded="True">
+                <Node name="Food.xaml" expanded="True" />
+              </Node>
+              <Node name="views" expanded="True">
+                <Node name="Cart.xaml" expanded="True" />
+                <Node name="Details.xaml" expanded="True" selected="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+            <Node name="RestoNaN.Android" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="RestoNaN" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.RestoNaN.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

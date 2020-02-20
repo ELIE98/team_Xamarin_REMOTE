@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" x:Class="RestoNaN.Started" NavigationPage.HasNavigationBar="False">
+
+    <StackLayout Orientation="Vertical" BackgroundColor="#6cad87" VerticalOptions="Center">
+        <StackLayout HorizontalOptions="End" BackgroundColor="#6cad87" Margin="0,18,0,0">
+            <Button Text="skip" TextColor="White" BackgroundColor="Transparent"></Button>
+        </StackLayout>
+
+        <StackLayout>
+
+
+            <CarouselView x:Name="Carousel" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame  Padding="0" HasShadow="false" IsClippedToBounds="False" CornerRadius="10">
+                            <Image Source="{Binding .}" Aspect="AspectFill"></Image>
+                        </Frame>
+
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+
+            </CarouselView>
+
+
+
+        </StackLayout>
+
+
+        <StackLayout Orientation="Vertical" BackgroundColor="#6cad87" Padding="15" Spacing="5">
+            <Label Text="Welcome" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="25" TextColor="White"></Label>
+            <Label Text="To SpotFinder" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="25" Margin="0,0,0,15" TextColor="White"></Label>
+
+            <Label Text="Search for unique in your hearest" HorizontalTextAlignment="Center" TextColor="White"></Label>
+            <Label Text="Location and explore new places" HorizontalTextAlignment="Center" TextColor="White"></Label>
+        </StackLayout>
+        <StackLayout BackgroundColor="#6cad87" Margin="0,0,0,18">
+            <Frame Padding="11" BorderColor="white" Margin="10" CornerRadius="30" BackgroundColor="#6cad87">
+                <Button Text="Get started" CornerRadius="20" BackgroundColor="White" x:Name="started"></Button>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+
+
+</ContentPage>

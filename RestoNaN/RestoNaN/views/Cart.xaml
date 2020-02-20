@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" x:Class="RestoNaN.views.Cart" NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False">
+    <StackLayout>
+
+
+        <StackLayout Margin="0,30">
+
+            <StackLayout Orientation="Horizontal">
+                <Frame CornerRadius="10" Padding="10" HasShadow="True" HorizontalOptions="StartAndExpand">
+                    <ImageButton Source="BackSimple" BackgroundColor="Transparent" x:Name="GoBackButton" HeightRequest="15" WidthRequest="20"></ImageButton>
+                </Frame>
+
+                <Label Text="My Order" TextColor="Black" FontAttributes="Bold" FontSize="Title" Margin="0,10,100,0"></Label>
+            </StackLayout>
+
+
+        </StackLayout>
+
+        <yummy:PancakeView HasShadow="True" CornerRadius="20,20,0,0" Padding="30">
+
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0,20" Spacing="15">
+                        <yummy:PancakeView CornerRadius="10" HasShadow="True" BorderColor="Gray">
+                            <Image Source="boeuf.jpeg" Aspect="AspectFill" HeightRequest="160" WidthRequest="170"></Image>
+                        </yummy:PancakeView>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="$34.00" TextColor="#6cad87" FontSize="Title" FontAttributes="Bold" />
+                            <Label Text="T-Bone steak" TextColor="Black" FontSize="Subtitle" />
+                            <Label Text="3000 Kcal" FontSize="Medium" />
+                            <Stepper x:Name="stepper" Increment="1" Minimum="1" Maximum="5" />
+                            <Label Text="{Binding Source={x:Reference stepper}, Path=Value}" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"></Label>
+                        </StackLayout>
+
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Horizontal" Margin="0,20,20,0" Spacing="15">
+                        <yummy:PancakeView CornerRadius="10" HasShadow="True" BorderColor="Gray">
+                            <Image Source="viande.jpeg" Aspect="AspectFill" HeightRequest="160" WidthRequest="170"></Image>
+                        </yummy:PancakeView>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="$12.00" TextColor="#6cad87" FontSize="Title" FontAttributes="Bold" />
+                            <Label Text="Health feast" TextColor="Black" FontSize="Subtitle" />
+                            <Label Text="290 Kcal" FontSize="Medium" />
+                            <Stepper x:Name="stepper2" Increment="1" Minimum="1" Maximum="5" />
+                            <Label Text="{Binding Source={x:Reference stepper2}, Path=Value}" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"></Label>
+                        </StackLayout>
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Horizontal" Margin="0,20" Spacing="15">
+                        <yummy:PancakeView CornerRadius="10" HasShadow="True" BorderColor="Gray">
+                            <Image Source="saumon.jpeg" Aspect="AspectFill" HeightRequest="160" WidthRequest="170"></Image>
+                        </yummy:PancakeView>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="$34.00" TextColor="#6cad87" FontSize="Title" FontAttributes="Bold" />
+                            <Label Text="Salmon fillet with salad" TextColor="Black" FontSize="Subtitle" />
+                            <Label Text="400 Kcal" FontSize="Medium" />
+                            <Stepper x:Name="stepper3" Increment="1" Minimum="1" Maximum="5" />
+                            <Label Text="{Binding Source={x:Reference stepper3}, Path=Value}" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold"></Label>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="Subtitle" Text="total:" FontAttributes="Bold" />
+                        <Label FontSize="Large" FontAttributes="Bold" TextColor="Black" Margin="0,0,30,0">$30.00</Label>
+
+                        <yummy:PancakeView CornerRadius="50,0,0,50" HorizontalOptions="Center">
+                            <Button Text="Confirm Order" TextColor="White" x:Name="CartButton" Padding="40,30" BackgroundColor="#6cad87" HorizontalOptions="EndAndExpand" />
+                        </yummy:PancakeView>
+
+                    </StackLayout>
+
+                </StackLayout>
+
+            </ScrollView>
+
+
+        </yummy:PancakeView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage BackgroundImageSource="girlBlack.Jpeg" Title="Sign Up" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ie="clr-namespace:IconEntry.FormsPlugin.Abstractions;assembly=IconEntry.FormsPlugin.Abstractions" x:Class="RestoNaN.views.signUp">
+    <ScrollView VerticalOptions="CenterAndExpand">
+
+
+        <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="20" Spacing="14">
+            <StackLayout>
+
+
+                <StackLayout>
+                    <Label Text="RestoNaN" FontAttributes="Bold" FontSize="30" TranslationY="-30" HorizontalOptions="Center" TextColor="White" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Frame HasShadow="True" Padding="10" CornerRadius="5" Opacity="0.7" HorizontalOptions="StartAndExpand" BackgroundColor="#dadae0">
+                        <ie:IconEntry PlaceholderColor="#6cad87" FontAttributes="Bold" Placeholder="nom" HorizontalTextAlignment="Center" WidthRequest="150" x:Name="nom" />
+                    </Frame>
+
+                    <Frame HasShadow="True" CornerRadius="5" Opacity="0.7" HorizontalOptions="EndAndExpand" Padding="10" BackgroundColor="#dadae0">
+                        <ie:IconEntry PlaceholderColor="#6cad87" Placeholder="Prenom" HorizontalTextAlignment="Center" WidthRequest="150" x:Name="prenom" />
+                    </Frame>
+
+                </StackLayout>
+
+                <Frame HasShadow="True" Padding="10" Opacity="0.7" BackgroundColor="#dadae0">
+                    <ie:IconEntry PlaceholderColor="#6cad87" Placeholder="Please input your email" Icon="emailicon.png" HorizontalTextAlignment="Center" x:Name="email" />
+                </Frame>
+
+                <Frame HasShadow="True" Opacity="0.7" BackgroundColor="#dadae0">
+                    <ie:IconEntry PlaceholderColor="#6cad87" Placeholder="Please input your password" Icon="eyeicon.png" HorizontalTextAlignment="Center" x:Name="password" HeightRequest="30" IsPassword="True" />
+                </Frame>
+                <Frame HasShadow="True" Opacity="0.7" BackgroundColor="#dadae0">
+                    <ie:IconEntry PlaceholderColor="#6cad87" Placeholder="Please input your phone" Icon="phone.png" HorizontalTextAlignment="Center" x:Name="phone" />
+                </Frame>
+
+                <StackLayout Orientation="Horizontal">
+
+                    <CheckBox IsChecked="True" Color="#6cad87" />
+
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End" Margin="10,0,0,0">
+                        <Label Text="I have read and agreed to your" FontAttributes="Bold" FontSize="Small" TextColor="White" />
+                        <Label Text="Tearms et Conditions" FontAttributes="Bold" FontSize="Small" TextColor="#5694f0" />
+                    </StackLayout>
+                </StackLayout>
+                <Button Text="Sign up" TextColor="White" BackgroundColor="#6cad87" CornerRadius="8" x:Name="signup"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
